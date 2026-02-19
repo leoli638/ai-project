@@ -3,8 +3,7 @@ import { CSV_TOOL_DECLARATIONS } from './csvTools';
 
 const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_API_KEY || '');
 
-// Fastest/cheapest: Flash-Lite. Alternatives: gemini-2.5-flash, gemini-2.5-pro.
-const MODEL = 'gemini-2.0-flash-lite';
+const MODEL = 'gemini-2.0-flash';
 
 const SEARCH_TOOL = { googleSearch: {} };
 const CODE_EXEC_TOOL = { codeExecution: {} };

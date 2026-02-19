@@ -128,6 +128,10 @@ New → **Blueprint** → connect your repo. Render reads `render.yaml` and crea
 
 ---
 
+### Build fails: "react-scripts: not found"
+
+Use **Build Command** `npm install && npm run build` (not just `npm run build`) so dependencies are installed before the build. Set **Publish Directory** to `build`.
+
 ### Free tier cold starts
 
 Render's free plan spins down services after 15 minutes of inactivity. The first request after a sleep takes ~30 seconds. Upgrade to the Starter plan ($7/mo) to avoid this.
