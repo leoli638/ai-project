@@ -31,9 +31,39 @@
   font-family: 'Inter', sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
-  margin: 0 0 0.9rem;
+  margin: 0 0 0.5rem;
   color: #fff;
   letter-spacing: -0.01em;
+}
+
+.sidebar-tabs {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.sidebar-tab {
+  flex: 1;
+  padding: 0.4rem 0.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+
+.sidebar-tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.sidebar-tab.active {
+  background: rgba(99, 102, 241, 0.35);
+  border-color: rgba(129, 140, 248, 0.4);
+  color: #fff;
 }
 
 .new-chat-btn {
@@ -974,4 +1004,174 @@
 
 .chat-empty-state p {
   margin: 0;
+}
+
+/* ── Metric vs time chart ─────────────────────────────────────────────────── */
+
+.metric-time-chart-wrap {
+  margin: 0.75rem 0;
+}
+
+.metric-time-chart-inner,
+.metric-time-chart-lightbox-inner {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.metric-time-chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.metric-time-chart-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.metric-time-chart-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.metric-time-chart-btn {
+  padding: 0.35rem 0.6rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.metric-time-chart-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.metric-time-chart-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.metric-time-chart-lightbox-inner {
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+/* ── Play video card ──────────────────────────────────────────────────────── */
+
+.play-video-card {
+  margin: 0.75rem 0;
+}
+
+.play-video-card-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.18s, border-color 0.18s;
+}
+
+.play-video-card-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(129, 140, 248, 0.35);
+}
+
+.play-video-card-thumb {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.play-video-card-title {
+  font-weight: 600;
+  color: #fff;
+}
+
+.play-video-card-hint {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ── Generated image block ───────────────────────────────────────────────── */
+
+.generated-image-block {
+  margin: 0.75rem 0;
+}
+
+.generated-image-img {
+  max-width: 100%;
+  max-height: 320px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.generated-image-img:hover {
+  opacity: 0.95;
+}
+
+.generated-image-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.generated-image-btn {
+  padding: 0.4rem 0.75rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.generated-image-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.generated-image-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.generated-image-lightbox-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 95vw;
+  max-height: 95vh;
+}
+
+.generated-image-lightbox-inner img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 10px;
 }
